@@ -1,0 +1,25 @@
+.Note {
+  padding: 0.8rem 1rem;
+  background-color: #fff;
+  color: #333;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    width: 95%;
+  }
+
+  div p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  div h2 {
+    color: var(--text-color-secondary);
+  }
+
+  border-bottom: 1px solid lighten(#333, 50%);
+  &:not(:last-child) {
+  }
+}
