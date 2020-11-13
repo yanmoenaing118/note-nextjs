@@ -2,30 +2,11 @@
   color: var(--primary-color);
   cursor: pointer;
   text-transform: uppercase;
-  font-weight: normal;
-  font-size: 0.8rem;
+  font-weight: 300;
+  font-size: 3rem;
   transition: all 0.3s;
-  animation: moveInLeft 0.7s ease-in;
 
   &:hover {
     color: lighten(#5cc870, 0.3);
-    box-shadow: 0 3px 20px rgba(#000, 0.12);
-    transform: translateX(5px);
-  }
-}
-
-@keyframes moveInLeft {
-  0% {
-    transform: translateX(-500px);
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    transform: translateX(0);
-    opacity: 1;
   }
 }

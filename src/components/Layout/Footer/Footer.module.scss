@@ -1,0 +1,47 @@
+.Footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem 0;
+  box-shadow: 0 -3px 10px rgba(#000, 0.1);
+  margin-top: 5rem;
+
+  p {
+    font-size: 1.2rem;
+    color: var(--text-color-primary);
+    margin-bottom: 1rem;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    width: 30%;
+
+    input {
+      padding: 1rem 1rem;
+      flex: 1;
+      font-size: 1.2rem;
+      color: var(--text-color-primary);
+      font-weight: 600;
+      border: 1px solid #333;
+
+      &:focus {
+        border: 1px solid var(--primary-color);
+      }
+
+      &::placeholder {
+        color: var(--text-color-tertiary);
+      }
+    }
+
+    button {
+      color: #fff;
+      background-color: var(--primary-color-dark);
+      border: none;
+      padding: 0.4rem 1rem;
+      margin-left: -5px;
+      text-transform: uppercase;
+    }
+  }
+}

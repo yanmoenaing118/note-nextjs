@@ -1,5 +1,12 @@
 .Notes {
-  grid-column: 4 / 12;
+  grid-column: 4 / -1;
   grid-row: 2 / -1;
   overflow-y: scroll;
+}
+
+.Note {
+  border-top: 1px solid lighten(#333, 70%);
+  &:last-child {
+    border-bottom: 1px solid lighten(#333, 70%);
+  }
 }

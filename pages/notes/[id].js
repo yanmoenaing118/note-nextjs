@@ -1,11 +1,12 @@
 import React from "react";
+import Layout from "../../src/components/Layout/Layout";
 import NoteDetail from "../../src/components/Notes/NoteDetail/NoteDetail";
 
 const note = ({ note }) => {
   return (
-    <div className="note-detail-page">
+    <Layout>
       <NoteDetail {...note} />
-    </div>
+    </Layout>
   );
 };
 

@@ -13,12 +13,13 @@
   padding: 0.4rem 0;
   padding-top: 1rem;
   h2 {
+    cursor: pointer;
     display: flex;
     align-items: center;
 
     i {
       margin-right: 0.5rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 300;
       text-transform: uppercase;
     }
@@ -34,9 +35,15 @@
   margin: 1rem;
   display: flex;
   align-items: center;
-  div {
+  a {
     margin-left: 2rem;
     text-transform: uppercase;
+    color: #fff;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-out;
+    &:hover {
+      border-bottom: 2px solid #fff;
+    }
   }
   span {
     font-weight: 900;

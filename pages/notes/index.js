@@ -1,19 +1,20 @@
 import React from "react";
+import Layout from "../../src/components/Layout/Layout";
 import NewNoteButton from "../../src/components/Notes/NewNote/NewNoteButton/NewNoteButton";
 import Notes from "../../src/components/Notes/Notes";
 
 const index = ({ notes }) => {
   return (
-    <div className="notes-page">
+    <Layout>
       <NewNoteButton />
       <Notes notes={notes} />
-    </div>
+    </Layout>
   );
 };
 
 export default index;
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const res = await fetch("http://localhost:3000/api/notes");
   const notes = await res.json();
   return {

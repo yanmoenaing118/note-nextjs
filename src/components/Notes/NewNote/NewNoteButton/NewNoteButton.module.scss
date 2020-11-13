@@ -1,6 +1,6 @@
 .NewNoteButton {
   grid-column: 1 / span 2;
-  grid-row: 2 / 3;
+  align-self: start;
   background-color: #fff;
   padding: 1rem;
   display: flex;

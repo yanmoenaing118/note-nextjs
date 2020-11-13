@@ -1,13 +1,32 @@
 .Note {
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 1rem 0.8rem 0.8rem;
   background-color: #fff;
   color: #333;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  border-left: 6px solid transparent;
+
+  transition: border-left 0.1s;
 
   div {
-    width: 95%;
+    width: 90%;
+  }
+
+  span {
+    cursor: pointer;
+    align-self: flex-start;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.12s;
+
+    &:hover {
+      background-color: rgba(#ccc, 0.1);
+    }
   }
 
   div p {
@@ -19,7 +38,7 @@
     color: var(--text-color-secondary);
   }
 
-  border-bottom: 1px solid lighten(#333, 50%);
-  &:not(:last-child) {
+  &:hover {
+    border-left: 6px solid var(--primary-color-light);
   }
 }
