@@ -13,9 +13,7 @@ const note = ({ note }) => {
 export default note;
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(
-    `https://learnnextjs.vercel.app/api/notes/${params.id}`
-  );
+  const res = await fetch(`${process.env.API_URL}/api/notes/${params.id}`);
   const note = await res.json();
 
   return {
