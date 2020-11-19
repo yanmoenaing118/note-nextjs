@@ -4,7 +4,7 @@ import posts from "../../../src/data/posts";
 const app = nc();
 
 app.get((req, res) => {
-  res.json(posts);
+  res.json(JSON.stringify(posts));
 });
 
 export default app;

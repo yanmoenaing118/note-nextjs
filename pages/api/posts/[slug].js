@@ -6,7 +6,7 @@ const app = nc();
 app.get((req, res) => {
   console.log(req.query);
   const post = posts.find((post) => post.id == req.query.slug);
-  res.json(post);
+  res.json(JSON.stringify(post));
 });
 
 export default app;

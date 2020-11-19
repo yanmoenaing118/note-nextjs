@@ -10,7 +10,7 @@ app
     res.json(note);
   })
   .get((req, res) => {
-    res.json(notes);
+    res.json(JSON.stringify(notes));
   });
 
 export default app;
