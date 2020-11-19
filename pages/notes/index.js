@@ -15,7 +15,7 @@ const index = ({ notes }) => {
 export default index;
 
 export async function getStaticProps(context) {
-  const res = await fetch("http://localhost:3000/api/notes");
+  const res = await fetch("https://learnnextjs-eahnwwn80.vercel.app/api/notes");
   const notes = await res.json();
   return {
     props: {
