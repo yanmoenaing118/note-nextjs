@@ -11,7 +11,7 @@ const post = (props) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch("https://learnnextjs-eahnwwn80.vercel.app/api/posts");
+  const res = await fetch("https://learnnextjs.vercel.app/api/posts");
   const posts = await res.json();
   const paths = posts.map((post) => ({
     params: { slug: post.id.toString() },

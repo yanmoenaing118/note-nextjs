@@ -11,7 +11,7 @@ const posts = (props) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("https://learnnextjs-eahnwwn80.vercel.app/api/posts");
+  const res = await fetch("https://learnnextjs.vercel.app/api/posts");
   const posts = await res.json();
 
   return {
