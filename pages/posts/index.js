@@ -11,7 +11,7 @@ const posts = (props) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.VERCEL_URL}/api/posts`);
+  const res = await fetch(`${process.env.API_URL}/api/posts`);
   console.log(res);
   const posts = await res.json();
 

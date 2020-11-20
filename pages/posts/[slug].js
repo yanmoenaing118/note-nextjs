@@ -11,7 +11,7 @@ const post = (props) => {
 };
 
 export async function getStaticPaths() {
-  const res = await fetch(`${process.env.VERCEL_URL}/api/posts`);
+  const res = await fetch(`${process.env.API_URL}/api/posts`);
   const posts = await res.json();
   const paths = posts.map((post) => ({
     params: { slug: post.id.toString() },
@@ -24,7 +24,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const res = await fetch(`${process.env.VERCEL_URL}/api/posts/${params.slug}`);
+  const res = await fetch(`${process.env.API_URL}/api/posts/${params.slug}`);
   const post = await res.json();
   return {
     props: {
