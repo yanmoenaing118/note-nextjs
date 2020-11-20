@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../src/components/Layout/Layout";
 import NoteDetail from "../../src/components/Notes/NoteDetail/NoteDetail";
+import { getAllNotesPaths, getANoteById } from "./../../lib/notes";
 
 const note = ({ note }) => {
   return (
@@ -12,10 +13,16 @@ const note = ({ note }) => {
 
 export default note;
 
-export async function getServerSideProps({ params }) {
-  const res = await fetch(`${process.env.API_URL}/api/notes/${params.id}`);
-  const note = await res.json();
+export async function getStaticPaths() {
+  const paths = getAllNotesPaths();
+  return {
+    paths,
+    fallback: false,
+  };
+}
 
+export async function getStaticProps({ params }) {
+  const note = getANoteById(params.id);
   return {
     props: {
       note,

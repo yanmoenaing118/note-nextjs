@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "../../src/components/Layout/Layout";
 import Posts from "../../src/components/Posts/Posts";
+import { getAllPosts } from "./../../lib/posts";
 
 const posts = (props) => {
   return (
@@ -11,9 +12,7 @@ const posts = (props) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.API_URL}/api/posts`);
-  console.log(res);
-  const posts = await res.json();
+  const posts = getAllPosts();
 
   return {
     props: { posts },

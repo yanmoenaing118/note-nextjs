@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../../src/components/Layout/Layout";
 import NewNoteButton from "../../src/components/Notes/NewNote/NewNoteButton/NewNoteButton";
 import Notes from "../../src/components/Notes/Notes";
+import { getAllNotes } from "./../../lib/notes";
 
 const index = ({ notes }) => {
   return (
@@ -15,8 +16,7 @@ const index = ({ notes }) => {
 export default index;
 
 export async function getStaticProps(context) {
-  const res = await fetch(`${process.env.API_URL}/api/notes`);
-  const notes = await res.json();
+  const notes = getAllNotes();
   return {
     props: {
       notes,
