@@ -1,5 +1,4 @@
 .NewNoteButton {
-  grid-column: 1 / span 2;
   align-self: start;
   background-color: #fff;
   padding: 1rem;
@@ -9,6 +8,8 @@
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(#000, 0.1);
   color: var(--primary-color);
+  width: 200px;
+  margin: 1rem auto;
 
   span {
     display: flex;

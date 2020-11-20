@@ -1,10 +1,11 @@
 .Header {
   background-color: var(--primary-color);
+  width: 100%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .Nav {
-  margin: auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -12,6 +13,17 @@
   width: 60%;
   padding: 0.4rem 0;
   padding-top: 1rem;
+  @media screen and (max-width: 782px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
+  }
+
+  @media screen and (max-width: 360px) {
+    width: 100%;
+  }
   h2 {
     cursor: pointer;
     display: flex;
@@ -32,7 +44,6 @@
 }
 
 .right {
-  margin: 1rem;
   display: flex;
   align-items: center;
   a {
