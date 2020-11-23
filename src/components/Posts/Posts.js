@@ -8,8 +8,8 @@ const Posts = (props) => {
     <>
       <HeadLinePost />
       <div className={classes.Posts}>
-        {props.posts.map((p) => {
-          return <Post {...p} />;
+        {props.posts.map((p, i) => {
+          return <Post key={i} {...p} />;
         })}
       </div>
     </>

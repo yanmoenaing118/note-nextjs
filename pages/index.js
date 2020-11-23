@@ -1,18 +1,25 @@
-import Zoom from "react-reveal/Zoom";
-
-import Anchor from "../src/components/Anchor/Anchor";
+import React from "react";
 import Layout from "../src/components/Layout/Layout";
+import NewNoteButton from "../src/components/Notes/NewNote/NewNoteButton/NewNoteButton";
+import Notes from "../src/components/Notes/Notes";
+import { getAllNotes } from "../lib/notes";
 
-const index = () => (
-  <Layout>
-    <div className="home">
-      <Zoom>
-        <Anchor href="/notes">
-          <p>See Notes &rarr;</p>
-        </Anchor>
-      </Zoom>
-    </div>
-  </Layout>
-);
+const index = ({ notes }) => {
+  return (
+    <Layout>
+      <NewNoteButton />
+      <Notes notes={notes} />
+    </Layout>
+  );
+};
 
 export default index;
+
+export async function getStaticProps(context) {
+  const notes = getAllNotes();
+  return {
+    props: {
+      notes,
+    },
+  };
+}

@@ -11,7 +11,7 @@ const Nav = (props) => {
   return (
     <header className={classes.Header}>
       <nav className={classes.Nav}>
-        <h2 onClick={(e) => router.push("/notes")}>
+        <h2 onClick={(e) => router.push("/")}>
           <i>MyNotes</i>
           <span>
             <MdLocalLibrary size="30px" />
