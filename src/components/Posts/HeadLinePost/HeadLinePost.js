@@ -36,7 +36,7 @@ export default function HeadLinePost(props) {
           <div className={classes.HeadLineNew}>
             <div className={classes.Background}></div>
             <div className={classes.Title}>
-              <h1>Breaking new: General Min Aung Hlaing visits Russia</h1>
+              <h1>Myanmar Military Coup Latest News</h1>
             </div>
             <img
               src="/images/image_3.jpg"
